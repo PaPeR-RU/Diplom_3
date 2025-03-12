@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="praktikum.MainPageTests" time="9.67" tests="9" errors="6" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3\target\test-classes;C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3\target\classes;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\paper\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\paper\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\paper\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\paper\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\paper\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\paper\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\paper\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\paper\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\paper\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\paper\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\paper\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\paper\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\paper\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\paper\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\paper\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\paper\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\paper\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\paper\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\paper\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\paper\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\paper\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\paper\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\paper\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\paper\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-junit4\2.21.0\allure-junit4-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-rest-assured\2.21.0\allure-rest-assured-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-attachments\2.21.0\allure-attachments-2.21.0.jar;C:\Users\paper\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\paper\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\paper\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.25_9\bin"/>
+    <property name="sun.java.command" value="C:\Users\paper\AppData\Local\Temp\surefire13424115398953706040\surefirebooter2305350539257295198.jar C:\Users\paper\AppData\Local\Temp\surefire13424115398953706040 2025-03-12T14-08-25_990-jvmRun1 surefire15556759270966668868tmp surefire_015157930991602759112tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3\target\test-classes;C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3\target\classes;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\paper\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\paper\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\paper\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\paper\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\paper\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\paper\.m2\repository\com\google\errorprone\error_prone_annotations\2.1.3\error_prone_annotations-2.1.3.jar;C:\Users\paper\.m2\repository\com\google\j2objc\j2objc-annotations\1.1\j2objc-annotations-1.1.jar;C:\Users\paper\.m2\repository\org\codehaus\mojo\animal-sniffer-annotations\1.14\animal-sniffer-annotations-1.14.jar;C:\Users\paper\.m2\repository\com\squareup\okhttp3\okhttp\3.11.0\okhttp-3.11.0.jar;C:\Users\paper\.m2\repository\com\squareup\okio\okio\1.14.0\okio-1.14.0.jar;C:\Users\paper\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\paper\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\paper\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\paper\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\paper\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\paper\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\paper\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\paper\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\paper\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;C:\Users\paper\.m2\repository\io\rest-assured\rest-assured\5.3.0\rest-assured-5.3.0.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy\4.0.6\groovy-4.0.6.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy-xml\4.0.6\groovy-xml-4.0.6.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\paper\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\paper\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\paper\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\paper\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\paper\.m2\repository\io\rest-assured\json-path\5.3.0\json-path-5.3.0.jar;C:\Users\paper\.m2\repository\org\apache\groovy\groovy-json\4.0.6\groovy-json-4.0.6.jar;C:\Users\paper\.m2\repository\io\rest-assured\rest-assured-common\5.3.0\rest-assured-common-5.3.0.jar;C:\Users\paper\.m2\repository\io\rest-assured\xml-path\5.3.0\xml-path-5.3.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-junit4\2.21.0\allure-junit4-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-java-commons\2.21.0\allure-java-commons-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-model\2.21.0\allure-model-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-rest-assured\2.21.0\allure-rest-assured-2.21.0.jar;C:\Users\paper\.m2\repository\io\qameta\allure\allure-attachments\2.21.0\allure-attachments-2.21.0.jar;C:\Users\paper\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;C:\Users\paper\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\paper\.m2\repository\org\projectlombok\lombok\1.18.28\lombok-1.18.28.jar;"/>
+    <property name="allure.results.directory" value="C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3\target/allure-results"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\paper"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="C:\Program Files\Amazon Corretto\jdk11.0.25_9"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\paper\AppData\Local\Temp\surefire13424115398953706040\surefirebooter2305350539257295198.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.25+9-LTS"/>
+    <property name="user.name" value="paper"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1251"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-11.0.25.9.1"/>
+    <property name="localRepository" value="C:\Users\paper\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\paper\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.25"/>
+    <property name="user.dir" value="C:\Users\paper\OneDrive\Рабочий стол\Diplom_Dmitriy_Zavgorodniy_14_90\Diplom_3"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk11.0.25_9\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files\Amazon Corretto\jdk11.0.25_9\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\apache-maven-3.9.9\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;D:\Git\cmd;D:\Git\mingw64\bin;D:\Git\usr\bin;;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\Users\paper\AppData\Local\Microsoft\WindowsApps;C:\WebDriver\bin;D:\allure-2.32.2\bin;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.25+9-LTS"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="checkNavFillingsIsSuccess[Browser chrome]" classname="praktikum.MainPageTests" time="2.775"/>
+  <testcase name="checkNavToppingsIsSuccess[Browser chrome]" classname="praktikum.MainPageTests" time="2.196"/>
+  <testcase name="checkNavBunsIsSuccess[Browser chrome]" classname="praktikum.MainPageTests" time="2.82"/>
+  <testcase name="checkNavFillingsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.625">
+    <error message="session not created: This version of ChromeDriver only supports Chrome version 134&#10;Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;PAPER&apos;, ip: &apos;192.168.0.17&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.25&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]&#10;	(No symbol) [0x00007FF6FF156010]&#10;	(No symbol) [0x00007FF6FEFE931A]&#10;	(No symbol) [0x00007FF6FF02D40D]&#10;	(No symbol) [0x00007FF6FF02C44B]&#10;	(No symbol) [0x00007FF6FF02655C]&#10;	(No symbol) [0x00007FF6FF021B2D]&#10;	(No symbol) [0x00007FF6FF075D0B]&#10;	(No symbol) [0x00007FF6FF0752E0]&#10;	(No symbol) [0x00007FF6FF067883]&#10;	(No symbol) [0x00007FF6FF030550]&#10;	(No symbol) [0x00007FF6FF031803]&#10;	GetHandleVerifier [0x00007FF6FF5472BD+3529853]&#10;	GetHandleVerifier [0x00007FF6FF55DA22+3621858]&#10;	GetHandleVerifier [0x00007FF6FF5524D3+3575443]&#10;	GetHandleVerifier [0x00007FF6FF2BB77A+860474]&#10;	(No symbol) [0x00007FF6FF16088F]&#10;	(No symbol) [0x00007FF6FF15CBC4]&#10;	(No symbol) [0x00007FF6FF15CD66]&#10;	(No symbol) [0x00007FF6FF14C2C9]&#10;	BaseThreadInitThunk [0x00007FFFC649E8D7+23]&#10;	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
+	(No symbol) [0x00007FF6FF156010]
+	(No symbol) [0x00007FF6FEFE931A]
+	(No symbol) [0x00007FF6FF02D40D]
+	(No symbol) [0x00007FF6FF02C44B]
+	(No symbol) [0x00007FF6FF02655C]
+	(No symbol) [0x00007FF6FF021B2D]
+	(No symbol) [0x00007FF6FF075D0B]
+	(No symbol) [0x00007FF6FF0752E0]
+	(No symbol) [0x00007FF6FF067883]
+	(No symbol) [0x00007FF6FF030550]
+	(No symbol) [0x00007FF6FF031803]
+	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
+	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
+	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
+	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
+	(No symbol) [0x00007FF6FF16088F]
+	(No symbol) [0x00007FF6FF15CBC4]
+	(No symbol) [0x00007FF6FF15CD66]
+	(No symbol) [0x00007FF6FF14C2C9]
+	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
+	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+
+	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 134.0.6998.88 (7e3d5c978c6d3a6eda25692cfac7f893a2b20dd0-refs/branch-heads/6998@{#1898}) on port 53970
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 53970.
+]]></system-err>
+  </testcase>
+  <testcase name="checkNavFillingsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.625">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
+</error>
+  </testcase>
+  <testcase name="checkNavToppingsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.633">
+    <error message="session not created: This version of ChromeDriver only supports Chrome version 134&#10;Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;PAPER&apos;, ip: &apos;192.168.0.17&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.25&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]&#10;	(No symbol) [0x00007FF6FF156010]&#10;	(No symbol) [0x00007FF6FEFE931A]&#10;	(No symbol) [0x00007FF6FF02D40D]&#10;	(No symbol) [0x00007FF6FF02C44B]&#10;	(No symbol) [0x00007FF6FF02655C]&#10;	(No symbol) [0x00007FF6FF021B2D]&#10;	(No symbol) [0x00007FF6FF075D0B]&#10;	(No symbol) [0x00007FF6FF0752E0]&#10;	(No symbol) [0x00007FF6FF067883]&#10;	(No symbol) [0x00007FF6FF030550]&#10;	(No symbol) [0x00007FF6FF031803]&#10;	GetHandleVerifier [0x00007FF6FF5472BD+3529853]&#10;	GetHandleVerifier [0x00007FF6FF55DA22+3621858]&#10;	GetHandleVerifier [0x00007FF6FF5524D3+3575443]&#10;	GetHandleVerifier [0x00007FF6FF2BB77A+860474]&#10;	(No symbol) [0x00007FF6FF16088F]&#10;	(No symbol) [0x00007FF6FF15CBC4]&#10;	(No symbol) [0x00007FF6FF15CD66]&#10;	(No symbol) [0x00007FF6FF14C2C9]&#10;	BaseThreadInitThunk [0x00007FFFC649E8D7+23]&#10;	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
+	(No symbol) [0x00007FF6FF156010]
+	(No symbol) [0x00007FF6FEFE931A]
+	(No symbol) [0x00007FF6FF02D40D]
+	(No symbol) [0x00007FF6FF02C44B]
+	(No symbol) [0x00007FF6FF02655C]
+	(No symbol) [0x00007FF6FF021B2D]
+	(No symbol) [0x00007FF6FF075D0B]
+	(No symbol) [0x00007FF6FF0752E0]
+	(No symbol) [0x00007FF6FF067883]
+	(No symbol) [0x00007FF6FF030550]
+	(No symbol) [0x00007FF6FF031803]
+	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
+	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
+	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
+	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
+	(No symbol) [0x00007FF6FF16088F]
+	(No symbol) [0x00007FF6FF15CBC4]
+	(No symbol) [0x00007FF6FF15CD66]
+	(No symbol) [0x00007FF6FF14C2C9]
+	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
+	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+
+	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 134.0.6998.88 (7e3d5c978c6d3a6eda25692cfac7f893a2b20dd0-refs/branch-heads/6998@{#1898}) on port 22283
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 22283.
+]]></system-err>
+  </testcase>
+  <testcase name="checkNavToppingsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.633">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
+</error>
+  </testcase>
+  <testcase name="checkNavBunsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.617">
+    <error message="session not created: This version of ChromeDriver only supports Chrome version 134&#10;Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;PAPER&apos;, ip: &apos;192.168.0.17&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.25&apos;&#10;Driver info: driver.version: ChromeDriver&#10;remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]&#10;	(No symbol) [0x00007FF6FF156010]&#10;	(No symbol) [0x00007FF6FEFE931A]&#10;	(No symbol) [0x00007FF6FF02D40D]&#10;	(No symbol) [0x00007FF6FF02C44B]&#10;	(No symbol) [0x00007FF6FF02655C]&#10;	(No symbol) [0x00007FF6FF021B2D]&#10;	(No symbol) [0x00007FF6FF075D0B]&#10;	(No symbol) [0x00007FF6FF0752E0]&#10;	(No symbol) [0x00007FF6FF067883]&#10;	(No symbol) [0x00007FF6FF030550]&#10;	(No symbol) [0x00007FF6FF031803]&#10;	GetHandleVerifier [0x00007FF6FF5472BD+3529853]&#10;	GetHandleVerifier [0x00007FF6FF55DA22+3621858]&#10;	GetHandleVerifier [0x00007FF6FF5524D3+3575443]&#10;	GetHandleVerifier [0x00007FF6FF2BB77A+860474]&#10;	(No symbol) [0x00007FF6FF16088F]&#10;	(No symbol) [0x00007FF6FF15CBC4]&#10;	(No symbol) [0x00007FF6FF15CD66]&#10;	(No symbol) [0x00007FF6FF14C2C9]&#10;	BaseThreadInitThunk [0x00007FFFC649E8D7+23]&#10;	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]&#10;" type="org.openqa.selenium.SessionNotCreatedException">org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
+	(No symbol) [0x00007FF6FF156010]
+	(No symbol) [0x00007FF6FEFE931A]
+	(No symbol) [0x00007FF6FF02D40D]
+	(No symbol) [0x00007FF6FF02C44B]
+	(No symbol) [0x00007FF6FF02655C]
+	(No symbol) [0x00007FF6FF021B2D]
+	(No symbol) [0x00007FF6FF075D0B]
+	(No symbol) [0x00007FF6FF0752E0]
+	(No symbol) [0x00007FF6FF067883]
+	(No symbol) [0x00007FF6FF030550]
+	(No symbol) [0x00007FF6FF031803]
+	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
+	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
+	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
+	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
+	(No symbol) [0x00007FF6FF16088F]
+	(No symbol) [0x00007FF6FF15CBC4]
+	(No symbol) [0x00007FF6FF15CD66]
+	(No symbol) [0x00007FF6FF14C2C9]
+	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
+	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+
+	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
+</error>
+    <system-err><![CDATA[Starting ChromeDriver 134.0.6998.88 (7e3d5c978c6d3a6eda25692cfac7f893a2b20dd0-refs/branch-heads/6998@{#1898}) on port 13146
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully on port 13146.
+]]></system-err>
+  </testcase>
+  <testcase name="checkNavBunsIsSuccess[Browser yandex]" classname="praktikum.MainPageTests" time="0.617">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
+</error>
+  </testcase>
+</testsuite>

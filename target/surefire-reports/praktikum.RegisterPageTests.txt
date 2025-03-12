@@ -1,0 +1,76 @@
+-------------------------------------------------------------------------------
+Test set: praktikum.RegisterPageTests
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 6.495 s <<< FAILURE! - in praktikum.RegisterPageTests
+registerNewUserIsSuccess[Browser yandex](praktikum.RegisterPageTests)  Time elapsed: 0.642 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
+	(No symbol) [0x00007FF6FF156010]
+	(No symbol) [0x00007FF6FEFE931A]
+	(No symbol) [0x00007FF6FF02D40D]
+	(No symbol) [0x00007FF6FF02C44B]
+	(No symbol) [0x00007FF6FF02655C]
+	(No symbol) [0x00007FF6FF021B2D]
+	(No symbol) [0x00007FF6FF075D0B]
+	(No symbol) [0x00007FF6FF0752E0]
+	(No symbol) [0x00007FF6FF067883]
+	(No symbol) [0x00007FF6FF030550]
+	(No symbol) [0x00007FF6FF031803]
+	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
+	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
+	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
+	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
+	(No symbol) [0x00007FF6FF16088F]
+	(No symbol) [0x00007FF6FF15CBC4]
+	(No symbol) [0x00007FF6FF15CD66]
+	(No symbol) [0x00007FF6FF14C2C9]
+	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
+	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+
+	at praktikum.RegisterPageTests.startUp(RegisterPageTests.java:44)
+
+registerNewUserIsSuccess[Browser yandex](praktikum.RegisterPageTests)  Time elapsed: 0.642 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.RegisterPageTests.tearDown(RegisterPageTests.java:60)
+
+registerNewUserLowPasswordIsFailed[Browser yandex](praktikum.RegisterPageTests)  Time elapsed: 0.673 s  <<< ERROR!
+org.openqa.selenium.SessionNotCreatedException: 
+session not created: This version of ChromeDriver only supports Chrome version 134
+Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
+Driver info: driver.version: ChromeDriver
+remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
+	(No symbol) [0x00007FF6FF156010]
+	(No symbol) [0x00007FF6FEFE931A]
+	(No symbol) [0x00007FF6FF02D40D]
+	(No symbol) [0x00007FF6FF02C44B]
+	(No symbol) [0x00007FF6FF02655C]
+	(No symbol) [0x00007FF6FF021B2D]
+	(No symbol) [0x00007FF6FF075D0B]
+	(No symbol) [0x00007FF6FF0752E0]
+	(No symbol) [0x00007FF6FF067883]
+	(No symbol) [0x00007FF6FF030550]
+	(No symbol) [0x00007FF6FF031803]
+	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
+	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
+	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
+	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
+	(No symbol) [0x00007FF6FF16088F]
+	(No symbol) [0x00007FF6FF15CBC4]
+	(No symbol) [0x00007FF6FF15CD66]
+	(No symbol) [0x00007FF6FF14C2C9]
+	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
+	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+
+	at praktikum.RegisterPageTests.startUp(RegisterPageTests.java:44)
+
+registerNewUserLowPasswordIsFailed[Browser yandex](praktikum.RegisterPageTests)  Time elapsed: 0.673 s  <<< ERROR!
+java.lang.NullPointerException
+	at praktikum.RegisterPageTests.tearDown(RegisterPageTests.java:60)
+
