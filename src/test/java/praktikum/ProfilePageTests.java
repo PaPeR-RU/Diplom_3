@@ -3,14 +3,11 @@ package praktikum;
 import handlers.ApiClient;
 import handlers.Parameters;
 import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import pageobjects.AuthPage;
 import pageobjects.MainPage;
@@ -22,30 +19,17 @@ import static handlers.WebDriverFactory.getWebDriver;
 import static org.hamcrest.Matchers.*;
 
 @DisplayName("Проверки личного кабинета пользователя")
-@RunWith(Parameterized.class)
 public class ProfilePageTests {
     private WebDriver driver;
-    private String browserName;
     private AuthPage authPage;
     private MainPage mainPage;
     private ProfilePage profilePage;
     private String name, email, password;
     private ApiClient apiClient;
 
-    @Parameterized.Parameters(name="Browser {0}")
-    public static Object[][] initParams() {
-        return new Object[][] {
-                {"chrome"},
-                {"yandex"}
-        };
-    }
-    public ProfilePageTests(String browserName) {
-        this.browserName = browserName;
-    }
     @Before
-    @Step("Запуск браузера, подготовка тестовых данных")
     public void startUp() {
-        driver = getWebDriver(browserName);
+        driver = getWebDriver();
         driver.get(Parameters.URL_MAIN_PAGE);
 
         authPage = new AuthPage(driver);
@@ -61,24 +45,26 @@ public class ProfilePageTests {
         Allure.addAttachment("Пароль", password);
 
         apiClient = new ApiClient();
-        apiClient.createUser(name, email,password);
+        apiClient.createUser(name, email, password);
     }
+
     @After
-    @Step("Закрытие браузера и очистка данных")
     public void tearDown() {
-        driver.quit();
-        apiClient.deleteTestUser(email, password);
+        if (driver != null) {
+            driver.quit();
+        }
+        if (apiClient != null) {
+            apiClient.deleteTestUser(email, password);
+        }
     }
-    @Step("Процесс авторизации")
+
     private void authUser() {
         authPage.setEmail(email);
         authPage.setPassword(password);
-
         authPage.clickAuthButton();
-
         authPage.waitFormSubmitted();
     }
-    @Step("Переход в личный кабинет")
+
     private void goToProfile() {
         driver.get(Parameters.URL_LOGIN_PAGE);
         authPage.waitAuthFormVisible();
@@ -88,11 +74,10 @@ public class ProfilePageTests {
         mainPage.clickLinkToProfile();
         profilePage.waitAuthFormVisible();
     }
+
     @Test
     @DisplayName("Проверка перехода по клику на «Личный кабинет»")
     public void checkLinkToProfileIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-
         goToProfile();
 
         MatcherAssert.assertThat(
@@ -101,11 +86,10 @@ public class ProfilePageTests {
                 containsString("/account/profile")
         );
     }
+
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на «Конструктор»")
     public void checkLinkToConstructorIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-
         goToProfile();
 
         profilePage.clickLinkToConstructor();
@@ -117,11 +101,10 @@ public class ProfilePageTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Проверка перехода из личного кабинета по клику на логотип Stellar Burgers")
     public void checkLinkOnLogoIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-
         goToProfile();
 
         profilePage.clickLinkOnLogo();
@@ -133,11 +116,10 @@ public class ProfilePageTests {
                 equalTo("Оформить заказ")
         );
     }
+
     @Test
     @DisplayName("Проверка выхода из личного кабинета по клику на кнопку Выйти")
     public void checkLinkLogOutIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-
         goToProfile();
 
         profilePage.clickLogoutLink();

@@ -14,45 +14,56 @@ public class RegisterPage {
     private final By title = By.xpath(".//main//h2");
     private final By authLink = By.xpath(".//a[starts-with(@class,'Auth_link')]");
     private final By modalOverlay = By.xpath(".//div[starts-with(@class, 'App_App')]/div[starts-with(@class, 'Modal_modal')]");
+
     public RegisterPage(WebDriver driver) {
-        webDriver = driver;
+        this.webDriver = driver;
     }
 
-    @Step("Заполнение имени")
+    @Step("Заполнение имени: {name}")
     public void setName(String name) {
         webDriver.findElements(inputs).get(0).sendKeys(name);
     }
-    @Step("Заполнение email")
+
+    @Step("Заполнение email: {email}")
     public void setEmail(String email) {
         webDriver.findElements(inputs).get(1).sendKeys(email);
     }
-    @Step("Заполнение password")
+
+    @Step("Заполнение пароля")
     public void setPassword(String password) {
         webDriver.findElements(inputs).get(2).sendKeys(password);
     }
 
-    @Step("Нажатие на кнопку регистрации")
+    @Step("Нажатие на кнопку 'Зарегистрироваться'")
     public void clickRegisterButton() {
         waitButtonIsClickable();
         webDriver.findElement(registerButton).click();
     }
 
+    @Step("Ожидание, пока кнопка станет кликабельной")
     private void waitButtonIsClickable() {
         new WebDriverWait(webDriver, 10)
                 .until(ExpectedConditions.invisibilityOf(webDriver.findElement(modalOverlay)));
     }
+
+    @Step("Ожидание завершения отправки формы с текстом: {expectedTitle}")
     public void waitFormSubmitted(String expectedTitle) {
         new WebDriverWait(webDriver, 5)
                 .until(ExpectedConditions.textToBe(title, expectedTitle));
     }
+
+    @Step("Ожидание появления сообщения об ошибке")
     public void waitErrorIsVisible() {
         new WebDriverWait(webDriver, 5)
                 .until(ExpectedConditions.visibilityOf(webDriver.findElement(errorMessage)));
     }
+
+    @Step("Получение сообщения об ошибке")
     public String getErrorMessage() {
         return webDriver.findElement(errorMessage).getText();
     }
 
+    @Step("Нажатие на ссылку 'Войти'")
     public void clickAuthLink() {
         waitButtonIsClickable();
         webDriver.findElement(authLink).click();

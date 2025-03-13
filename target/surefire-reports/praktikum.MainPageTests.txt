@@ -1,112 +1,49 @@
 -------------------------------------------------------------------------------
 Test set: praktikum.MainPageTests
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 9.67 s <<< FAILURE! - in praktikum.MainPageTests
-checkNavFillingsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.625 s  <<< ERROR!
-org.openqa.selenium.SessionNotCreatedException: 
-session not created: This version of ChromeDriver only supports Chrome version 134
-Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 96.101 s <<< FAILURE! - in praktikum.MainPageTests
+checkNavFillingsIsSuccess(praktikum.MainPageTests)  Time elapsed: 31.987 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Начинки')] (tried for 30 second(s) with 500 milliseconds interval)
+	at praktikum.MainPageTests.checkNavFillingsIsSuccess(MainPageTests.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Начинки')]"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
-	(No symbol) [0x00007FF6FF156010]
-	(No symbol) [0x00007FF6FEFE931A]
-	(No symbol) [0x00007FF6FF02D40D]
-	(No symbol) [0x00007FF6FF02C44B]
-	(No symbol) [0x00007FF6FF02655C]
-	(No symbol) [0x00007FF6FF021B2D]
-	(No symbol) [0x00007FF6FF075D0B]
-	(No symbol) [0x00007FF6FF0752E0]
-	(No symbol) [0x00007FF6FF067883]
-	(No symbol) [0x00007FF6FF030550]
-	(No symbol) [0x00007FF6FF031803]
-	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
-	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
-	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
-	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
-	(No symbol) [0x00007FF6FF16088F]
-	(No symbol) [0x00007FF6FF15CBC4]
-	(No symbol) [0x00007FF6FF15CD66]
-	(No symbol) [0x00007FF6FF14C2C9]
-	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
-	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65367}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f8d20327add0aa516da5b611300e355a
+*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Начинки')]}
+	at praktikum.MainPageTests.checkNavFillingsIsSuccess(MainPageTests.java:75)
 
-	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
-
-checkNavFillingsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.625 s  <<< ERROR!
-java.lang.NullPointerException
-	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
-
-checkNavToppingsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.633 s  <<< ERROR!
-org.openqa.selenium.SessionNotCreatedException: 
-session not created: This version of ChromeDriver only supports Chrome version 134
-Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+checkNavToppingsIsSuccess(praktikum.MainPageTests)  Time elapsed: 32.046 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')] (tried for 30 second(s) with 500 milliseconds interval)
+	at praktikum.MainPageTests.checkNavToppingsIsSuccess(MainPageTests.java:61)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
-	(No symbol) [0x00007FF6FF156010]
-	(No symbol) [0x00007FF6FEFE931A]
-	(No symbol) [0x00007FF6FF02D40D]
-	(No symbol) [0x00007FF6FF02C44B]
-	(No symbol) [0x00007FF6FF02655C]
-	(No symbol) [0x00007FF6FF021B2D]
-	(No symbol) [0x00007FF6FF075D0B]
-	(No symbol) [0x00007FF6FF0752E0]
-	(No symbol) [0x00007FF6FF067883]
-	(No symbol) [0x00007FF6FF030550]
-	(No symbol) [0x00007FF6FF031803]
-	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
-	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
-	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
-	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
-	(No symbol) [0x00007FF6FF16088F]
-	(No symbol) [0x00007FF6FF15CBC4]
-	(No symbol) [0x00007FF6FF15CD66]
-	(No symbol) [0x00007FF6FF14C2C9]
-	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
-	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 059813928801b4f9b61a2d7f63429e3a
+*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]}
+	at praktikum.MainPageTests.checkNavToppingsIsSuccess(MainPageTests.java:61)
 
-	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
-
-checkNavToppingsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.633 s  <<< ERROR!
-java.lang.NullPointerException
-	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
-
-checkNavBunsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.617 s  <<< ERROR!
-org.openqa.selenium.SessionNotCreatedException: 
-session not created: This version of ChromeDriver only supports Chrome version 134
-Current browser version is 132.0.6834.809 with binary path C:/Users/paper/AppData/Local/Yandex/YandexBrowser/Application/browser.exe
+checkNavBunsIsSuccess(praktikum.MainPageTests)  Time elapsed: 32.064 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')] (tried for 30 second(s) with 500 milliseconds interval)
+	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:43)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]"}
+  (Session info: chrome=134.0.6998.89)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
-Driver info: driver.version: ChromeDriver
-remote stacktrace: 	GetHandleVerifier [0x00007FF6FF1EFE45+26629]
-	(No symbol) [0x00007FF6FF156010]
-	(No symbol) [0x00007FF6FEFE931A]
-	(No symbol) [0x00007FF6FF02D40D]
-	(No symbol) [0x00007FF6FF02C44B]
-	(No symbol) [0x00007FF6FF02655C]
-	(No symbol) [0x00007FF6FF021B2D]
-	(No symbol) [0x00007FF6FF075D0B]
-	(No symbol) [0x00007FF6FF0752E0]
-	(No symbol) [0x00007FF6FF067883]
-	(No symbol) [0x00007FF6FF030550]
-	(No symbol) [0x00007FF6FF031803]
-	GetHandleVerifier [0x00007FF6FF5472BD+3529853]
-	GetHandleVerifier [0x00007FF6FF55DA22+3621858]
-	GetHandleVerifier [0x00007FF6FF5524D3+3575443]
-	GetHandleVerifier [0x00007FF6FF2BB77A+860474]
-	(No symbol) [0x00007FF6FF16088F]
-	(No symbol) [0x00007FF6FF15CBC4]
-	(No symbol) [0x00007FF6FF15CD66]
-	(No symbol) [0x00007FF6FF14C2C9]
-	BaseThreadInitThunk [0x00007FFFC649E8D7+23]
-	RtlUserThreadStart [0x00007FFFC6A1BF2C+44]
-
-	at praktikum.MainPageTests.startUp(MainPageTests.java:38)
-
-checkNavBunsIsSuccess[Browser yandex](praktikum.MainPageTests)  Time elapsed: 0.617 s  <<< ERROR!
-java.lang.NullPointerException
-	at praktikum.MainPageTests.tearDown(MainPageTests.java:45)
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65470}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8200f841e90a9e0734ea1f931ab40601
+*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]}
+	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:43)
 

@@ -13,33 +13,45 @@ public class AuthPage {
     private final By authButton = By.xpath(".//form[starts-with(@class, 'Auth_form')]/button");
     private final By title = By.xpath(".//main//h2");
     private final By modalOverlay = By.xpath(".//div[starts-with(@class, 'App_App')]/div/div[starts-with(@class, 'Modal_modal_overlay')]");
+
     public AuthPage(WebDriver driver) {
         this.driver = driver;
     }
+
+    @Step("Получение заголовка страницы авторизации")
     public String getTitle() {
         return driver.findElement(title).getText();
     }
-    @Step("Заполнение email")
+
+    @Step("Заполнение email: {email}")
     public void setEmail(String email) {
         driver.findElements(inputs).get(0).sendKeys(email);
     }
-    @Step("Заполнение password")
+
+    @Step("Заполнение пароля")
     public void setPassword(String password) {
         driver.findElements(inputs).get(1).sendKeys(password);
     }
+
     @Step("Нажатие на кнопку авторизации")
     public void clickAuthButton() {
         waitButtonIsClickable();
         driver.findElement(authButton).click();
     }
+
+    @Step("Ожидание, пока кнопка станет кликабельной")
     public void waitButtonIsClickable() {
         new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.invisibilityOf(driver.findElement(modalOverlay)));
     }
+
+    @Step("Ожидание завершения отправки формы")
     public void waitFormSubmitted() {
         new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.visibilityOfElementLocated(header));
     }
+
+    @Step("Ожидание видимости формы авторизации")
     public void waitAuthFormVisible() {
         new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.textToBe(title, "Вход"));

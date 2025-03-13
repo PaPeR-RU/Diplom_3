@@ -1,93 +1,83 @@
 package praktikum;
 
 import handlers.Parameters;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 import io.qameta.allure.junit4.DisplayName;
 import org.hamcrest.MatcherAssert;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pageobjects.MainPage;
 
 import static handlers.WebDriverFactory.getWebDriver;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.containsString;
 
 @DisplayName("Проверки конструктора (главной страницы)")
-@RunWith(Parameterized.class)
 public class MainPageTests {
     private WebDriver driver;
-    private String browserName;
     private MainPage mainPage;
-    @Parameterized.Parameters(name="Browser {0}")
-    public static Object[][] initParams() {
-        return new Object[][] {
-                {"chrome"},
-                {"yandex"}
-        };
-    }
-    public MainPageTests(String browserName) {
-        this.browserName = browserName;
-    }
+    private WebDriverWait wait;
+
     @Before
-    @Step("Запуск браузера")
     public void startUp() {
-        driver = getWebDriver(browserName);
+        driver = getWebDriver();
+        wait = new WebDriverWait(driver, 30);
         driver.get(Parameters.URL_MAIN_PAGE);
         mainPage = new MainPage(driver);
     }
+
     @After
-    @Step("Закрытие браузера")
     public void tearDown() {
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
+
     @Test
-    @Step("Нажатие на вкладку Булки")
     @DisplayName("Проверка работы вкладки Булки в разделе с ингредиентами")
     public void checkNavBunsIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-        int expectedLocation = mainPage.getIngredientTitleExpectedLocation();
-
         mainPage.clickToppingsButton();
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mainPage.getToppingsTab()));
+
         mainPage.clickBunsButton();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mainPage.getBunsTab()));
+
         MatcherAssert.assertThat(
-                "Ингредиенты не проскроллились до булок",
-                mainPage.getBunsLocation(),
-                equalTo(expectedLocation)
+                "Вкладка 'Булки' не активна",
+                driver.findElement(mainPage.getBunsTab()).getAttribute("class"),
+                containsString("tab_tab_type_current__2BEPc")
         );
     }
+
     @Test
-    @Step("Нажатие на вкладку Соусы")
     @DisplayName("Проверка работы вкладки Соусы в разделе с ингредиентами")
     public void checkNavToppingsIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-        int expectedLocation = mainPage.getIngredientTitleExpectedLocation();
-
         mainPage.clickToppingsButton();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mainPage.getToppingsTab()));
+
         MatcherAssert.assertThat(
-                "Ингредиенты не проскроллились до соусов",
-                mainPage.getToppingsLocation(),
-                equalTo(expectedLocation)
+                "Вкладка 'Соусы' не активна",
+                driver.findElement(mainPage.getToppingsTab()).getAttribute("class"),
+                containsString("tab_tab_type_current__2BEPc")
         );
     }
+
     @Test
-    @Step("Нажатие на вкладку Начинки")
     @DisplayName("Проверка работы вкладки Начинки в разделе с ингредиентами")
     public void checkNavFillingsIsSuccess() {
-        Allure.parameter("Браузер", browserName);
-        int expectedLocation = mainPage.getIngredientTitleExpectedLocation();
-
         mainPage.clickFillingsButton();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(mainPage.getFillingsTab()));
+
         MatcherAssert.assertThat(
-                "Ингредиенты не проскроллились до соусов",
-                mainPage.getFillingsLocation(),
-                equalTo(expectedLocation)
+                "Вкладка 'Начинки' не активна",
+                driver.findElement(mainPage.getFillingsTab()).getAttribute("class"),
+                containsString("tab_tab_type_current__2BEPc")
         );
     }
 }

@@ -1,78 +1,96 @@
 package pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
-    private WebDriver driver;
+    private final WebDriver driver;
+    private final WebDriverWait wait;
+
     private final By headerLinks = By.xpath(".//p[starts-with(@class,'AppHeader_header__linkText')]");
     private final By basketButton = By.xpath(".//div[starts-with(@class,'BurgerConstructor_basket__container')]/button");
     private final By ingredientsButtons = By.xpath(".//section[starts-with(@class, 'BurgerIngredients_ingredients')]/div/div");
-    private final By ingredientsTitles = By.xpath(".//div[starts-with(@class, 'BurgerIngredients_ingredients__menuContainer')]/h2");
-    private final By header = By.xpath(".//main//h1");
     private final By modalOverlay = By.xpath(".//div[starts-with(@class, 'App_App')]/div/div[starts-with(@class, 'Modal_modal_overlay')]");
+    private final By bunsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Булочки')]");
+    private final By toppingsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]");
+    private final By fillingsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Начинки')]");
+    private final By header = By.xpath(".//main//h1");
 
     public MainPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, 30);
     }
 
+    @Step("Нажатие на кнопку авторизации")
     public void clickAuthButton() {
         waitButtonIsClickable();
         driver.findElement(basketButton).click();
     }
+
+    @Step("Ожидание, пока кнопка станет кликабельной")
     public void waitButtonIsClickable() {
-        new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.invisibilityOf(driver.findElement(modalOverlay)));
+        wait.until(ExpectedConditions.invisibilityOf(driver.findElement(modalOverlay)));
     }
+
+    @Step("Ожидание видимости заголовка")
     public void waitHeaderIsVisible() {
-        new WebDriverWait(driver, 30)
-                .until(ExpectedConditions.visibilityOfElementLocated(header));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(header));
     }
-    private void waitIngredientsScrolled(int navNumber) {
-        new WebDriverWait(driver, 30)
-                .until(driver -> {
-                            return driver.findElements(ingredientsTitles).get(navNumber).getLocation().getY() == 243;
-                        }
-                );
-    }
+
+    @Step("Получение текста кнопки корзины")
     public String getBasketButtonText() {
         return driver.findElement(basketButton).getText();
     }
+
+    @Step("Нажатие на ссылку 'Личный кабинет'")
     public void clickLinkToProfile() {
         waitButtonIsClickable();
         driver.findElements(headerLinks).get(2).click();
     }
-    public int getIngredientTitleExpectedLocation() {
-        return Integer.valueOf(driver.findElements(ingredientsButtons).get(0).getLocation().getY()
-                + driver.findElements(ingredientsButtons).get(0).getSize().getHeight()
-        );
-    }
+
+    @Step("Нажатие на кнопку 'Булочки'")
     public void clickBunsButton() {
         waitButtonIsClickable();
-        driver.findElements(ingredientsButtons).get(0).click();
-        waitIngredientsScrolled(0);
+        getBunsButton().click();
     }
+
+    @Step("Нажатие на кнопку 'Начинки'")
     public void clickToppingsButton() {
         waitButtonIsClickable();
-        driver.findElements(ingredientsButtons).get(1).click();
-        waitIngredientsScrolled(1);
+        getToppingsButton().click();
     }
+
+    @Step("Нажатие на кнопку 'Соусы'")
     public void clickFillingsButton() {
         waitButtonIsClickable();
-        driver.findElements(ingredientsButtons).get(2).click();
-        waitIngredientsScrolled(2);
+        getFillingsButton().click();
     }
 
-    public int getBunsLocation() {
-        return Integer.valueOf(driver.findElements(ingredientsTitles).get(0).getLocation().getY());
+    public By getBunsTab() {
+        return bunsTab;
     }
 
-    public int getToppingsLocation() {
-        return Integer.valueOf(driver.findElements(ingredientsTitles).get(1).getLocation().getY());
+    public By getToppingsTab() {
+        return toppingsTab;
     }
-    public int getFillingsLocation() {
-        return Integer.valueOf(driver.findElements(ingredientsTitles).get(2).getLocation().getY());
+
+    public By getFillingsTab() {
+        return fillingsTab;
+    }
+
+    public WebElement getBunsButton() {
+        return wait.until(ExpectedConditions.elementToBeClickable(driver.findElements(ingredientsButtons).get(0)));
+    }
+
+    public WebElement getToppingsButton() {
+        return wait.until(ExpectedConditions.elementToBeClickable(driver.findElements(ingredientsButtons).get(1)));
+    }
+
+    public WebElement getFillingsButton() {
+        return wait.until(ExpectedConditions.elementToBeClickable(driver.findElements(ingredientsButtons).get(2)));
     }
 }

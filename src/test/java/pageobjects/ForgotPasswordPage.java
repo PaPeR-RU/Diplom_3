@@ -1,5 +1,6 @@
 package pageobjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,10 +14,14 @@ public class ForgotPasswordPage {
     public ForgotPasswordPage(WebDriver driver) {
         this.driver = driver;
     }
+
+    @Step("Нажатие на ссылку 'Войти'")
     public void clickAuthLink() {
         waitButtonIsClickable();
         driver.findElement(authLink).click();
     }
+
+    @Step("Ожидание, пока кнопка станет кликабельной")
     private void waitButtonIsClickable() {
         new WebDriverWait(driver, 30)
                 .until(ExpectedConditions.invisibilityOf(driver.findElement(modalOverlay)));
