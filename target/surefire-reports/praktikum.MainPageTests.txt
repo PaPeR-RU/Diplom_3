@@ -1,49 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: praktikum.MainPageTests
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 96.101 s <<< FAILURE! - in praktikum.MainPageTests
-checkNavFillingsIsSuccess(praktikum.MainPageTests)  Time elapsed: 31.987 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Íà÷èíêè')] (tried for 30 second(s) with 500 milliseconds interval)
-	at praktikum.MainPageTests.checkNavFillingsIsSuccess(MainPageTests.java:75)
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 35.368 s <<< FAILURE! - in praktikum.MainPageTests
+checkNavBunsIsSuccess(praktikum.MainPageTests)  Time elapsed: 32.024 s  <<< ERROR!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Ğ‘ÑƒĞ»Ğ¾Ñ‡ĞºĞ¸')] (tried for 30 second(s) with 500 milliseconds interval)
+	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:41)
 Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Íà÷èíêè')]"}
+no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Ğ‘ÑƒĞ»Ğ¾Ñ‡ĞºĞ¸')]"}
   (Session info: chrome=134.0.6998.89)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65367}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f8d20327add0aa516da5b611300e355a
-*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Íà÷èíêè')]}
-	at praktikum.MainPageTests.checkNavFillingsIsSuccess(MainPageTests.java:75)
-
-checkNavToppingsIsSuccess(praktikum.MainPageTests)  Time elapsed: 32.046 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')] (tried for 30 second(s) with 500 milliseconds interval)
-	at praktikum.MainPageTests.checkNavToppingsIsSuccess(MainPageTests.java:61)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')]"}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65412}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 059813928801b4f9b61a2d7f63429e3a
-*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')]}
-	at praktikum.MainPageTests.checkNavToppingsIsSuccess(MainPageTests.java:61)
-
-checkNavBunsIsSuccess(praktikum.MainPageTests)  Time elapsed: 32.064 s  <<< ERROR!
-org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')] (tried for 30 second(s) with 500 milliseconds interval)
-	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:43)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')]"}
-  (Session info: chrome=134.0.6998.89)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'PAPER', ip: '192.168.0.17', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.25'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65470}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8200f841e90a9e0734ea1f931ab40601
-*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Ñîóñû')]}
-	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:43)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.89, chrome: {chromedriverVersion: 134.0.6998.88 (7e3d5c978c6d..., userDataDir: C:\Users\paper\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64636}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: eager, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7fa179226053bd8434f2d45bf1b7fafe
+*** Element info: {Using=xpath, value=.//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Ğ‘ÑƒĞ»Ğ¾Ñ‡ĞºĞ¸')]}
+	at praktikum.MainPageTests.checkNavBunsIsSuccess(MainPageTests.java:41)
 

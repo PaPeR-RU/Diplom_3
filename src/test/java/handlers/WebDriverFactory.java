@@ -9,7 +9,7 @@ public class WebDriverFactory {
     public static WebDriver getWebDriver() {
         String browserName = System.getProperty("browser", "chrome");
 
-        System.setProperty("webdriver.chrome.driver", "C:/Users/paper/OneDrive/Рабочий стол/Diplom_Dmitriy_Zavgorodniy_14_90/Diplom_3/src/test/resources/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "D:/JAVA/Diplom_Dmitriy_Zavgorodniy_14_90/Diplom_3/src/test/resources/chromedriver.exe");
 
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(true);

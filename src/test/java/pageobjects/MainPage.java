@@ -15,9 +15,9 @@ public class MainPage {
     private final By basketButton = By.xpath(".//div[starts-with(@class,'BurgerConstructor_basket__container')]/button");
     private final By ingredientsButtons = By.xpath(".//section[starts-with(@class, 'BurgerIngredients_ingredients')]/div/div");
     private final By modalOverlay = By.xpath(".//div[starts-with(@class, 'App_App')]/div/div[starts-with(@class, 'Modal_modal_overlay')]");
-    private final By bunsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Булочки')]");
-    private final By toppingsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Соусы')]");
-    private final By fillingsTab = By.xpath(".//div[contains(@class, 'tab_tab_type_current__2BEPc') and contains(text(), 'Начинки')]");
+    private final By bunsTab = By.xpath(".//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Булочки')]");
+    private final By toppingsTab = By.xpath(".//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Соусы')]");
+    private final By fillingsTab = By.xpath(".//div[contains(@class, 'tab_tab__1SPyG') and contains(@class, 'tab_tab_type_current__2BEPc')]//span[contains(text(), 'Начинки')]");
     private final By header = By.xpath(".//main//h1");
 
     public MainPage(WebDriver driver) {
@@ -70,16 +70,37 @@ public class MainPage {
         getFillingsButton().click();
     }
 
-    public By getBunsTab() {
-        return bunsTab;
+    @Step("Ожидание видимости вкладки 'Булочки'")
+    public void waitBunsTabVisible() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(bunsTab));
     }
 
-    public By getToppingsTab() {
-        return toppingsTab;
+    @Step("Ожидание видимости вкладки 'Соусы'")
+    public void waitToppingsTabVisible() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(toppingsTab));
     }
 
-    public By getFillingsTab() {
-        return fillingsTab;
+    @Step("Ожидание видимости вкладки 'Начинки'")
+    public void waitFillingsTabVisible() {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(fillingsTab));
+    }
+
+    @Step("Получение класса вкладки 'Булочки'")
+    public String getBunsTabClass() {
+        WebElement bunsTabElement = wait.until(ExpectedConditions.visibilityOfElementLocated(bunsTab));
+        return bunsTabElement.findElement(By.xpath("./..")).getAttribute("class"); // Проверяем класс родительского элемента
+    }
+
+    @Step("Получение класса вкладки 'Соусы'")
+    public String getToppingsTabClass() {
+        WebElement toppingsTabElement = wait.until(ExpectedConditions.visibilityOfElementLocated(toppingsTab));
+        return toppingsTabElement.findElement(By.xpath("./..")).getAttribute("class"); // Проверяем класс родительского элемента
+    }
+
+    @Step("Получение класса вкладки 'Начинки'")
+    public String getFillingsTabClass() {
+        WebElement fillingsTabElement = wait.until(ExpectedConditions.visibilityOfElementLocated(fillingsTab));
+        return fillingsTabElement.findElement(By.xpath("./..")).getAttribute("class"); // Проверяем класс родительского элемента
     }
 
     public WebElement getBunsButton() {
